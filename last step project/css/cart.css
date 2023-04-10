@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+
+@font-face {
+   font-family: FiraGO;
+   src: url("../fonts/FiraGO-Regular.woff");
+ }
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   
+}
+
+
+
+/* start navbar */
+
+nav {
+   width: 100%;
+   max-width: 100%;
+   margin: auto;
+   background: #F7F7F7;
+   box-shadow: 0px 2px 6px 2px rgba(184, 184, 184, 0.25);
+   padding: 12px 15px;
+}
+
+
+.navbar {
+   width: 1396px;
+   max-width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: auto;
+}
+
+
+.logo-box{
+   width: 400px;
+}
+
+
+nav .logo-box h1 a {
+   font-family: 'Inter', sans-serif;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 24px;
+   color: #121212;
+   text-decoration: none;
+}
+
+
+.nav-menu{
+   width: 911px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+
+
+
+
+.input-main-box {
+   width: fit-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.search-input {
+   width: 443px;
+   max-width: 100%;
+   padding: 5px 353px 5px 14px;
+   outline: none;
+   border: 1px solid #121212;
+   border-radius: 24px;
+   font-family: FiraGO , sans-serif ;
+   font-size: 1rem;
+}
+
+
+.submit-button {
+   transform: translateX(-26px);
+   cursor: pointer;
+}
+
+
+.search-input::placeholder{
+   font-family: FiraGO;
+font-weight: 400;
+font-size: 20px;
+color: #BEBEBE;
+}
+
+
+.hamburger{
+   display: none;
+   cursor: pointer;
+   border: 2px solid gray;
+   padding: 0 5px;
+   border-radius: 7px;
+}
+
+.bar {
+   display: block;
+   width: 35px;
+   height: 5px;
+   margin: 6px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3 ease-in-out;
+   background-color: #4e4e50;
+   border-radius: 30px;
+}
+
+/* end navbar */
+
+
+
+/* start navbar responsive */
+
+
+@media(max-width:828px){
+   .logo-box{
+      width: 200px;
+   }
+}
+
+
+
+@media (max-width:660px){
+   
+   .navbar{
+      flex-wrap: wrap;
+   }
+   
+   
+   .nav-menu{
+      display: none;  
+   }
+
+   .hamburger {
+      display: block;
+   }
+
+
+   .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1){
+      transform: translateY(11px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3){
+      transform: translateY(-11px) rotate(-45deg);
+   }
+
+
+   .nav-menu.active{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+   }
+
+   .search-input {
+      width: 243px;
+      max-width: 100%;
+      padding: 5px 0 5px 14px;
+   }
+   
+   .logo-box{
+      width: fit-content;
+   }
+
+}
+
+
+@media (max-width:320px){
+   .nav-menu .cart-box{
+      margin-top: 10px;
+   }
+
+}
+
+
+/* end navbar responsive */
+
+
+
+
+
+/* start order's styles */
+
+
+.main-cart-box{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 68px;
+}
+
+.big-order-text{
+    font-family: FiraGO;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+color: #121212;
+text-align: center;
+}
+
+
+
+.orders-box{
+    width: 1040px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 68px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 68px;
+}
+
+
+
+
+/* start order products styles */
+
+
+.products-box{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    background: #F6F6F6;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px 4px rgba(184, 184, 184, 0.25);
+ 
+ }
+ 
+ 
+ 
+ .laptop-image{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+ 
+ }
+ 
+ 
+ 
+ .title-box {
+    width: 352px;
+    padding: 0  0 0 20px;
+ }
+ 
+ 
+ .title-box h3{
+    width: 242px;
+    max-width: 100%;
+    font-family: FiraGO;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 24px;
+ color: #121212;
+ margin-top: 24px;
+ }
+ 
+ 
+ .stars-box{
+    margin-top: 15px;
+ }
+ 
+ 
+ .title-box p {
+    font-family: FiraGO;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 19px;
+ color: #BEBEBE;
+ margin-top: 26px;
+ }
+ 
+ 
+ .price-box{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 42px 0 28px;
+    gap: 37px;
+ }
+ 
+ 
+ 
+ .price-box h2{
+    font-family: FiraGO;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #121212;
+ }
+ 
+ 
+ 
+ .incr-decr-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 55px;
+    border-left: 1px solid #BEBEBE;
+    border-right: 1px solid #BEBEBE;
+
+ }
+ 
+ 
+ .remove-product{
+   cursor: pointer;
+ }
+ 
+ 
+ /* start products responsive */
+ 
+ 
+ @media (max-width:887px) {
+    .products-box{
+             display: grid;
+             justify-content: center;
+             align-items: center;
+             width: 266px;
+    }
+ 
+    .title-box {
+       width: 100%;
+       text-align: center;
+       padding: 0;
+       padding-bottom: 15px;
+
+    }
+ 
+    .title-box h3 {
+       width: 100%;
+    }
+ 
+ 
+    .price-box {
+       padding: 15px 8px;
+       text-align: center;
+       gap: 20px;
+       border-left: none;
+ 
+ 
+    }
+ 
+ 
+    .laptop-image{
+       border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    }
+    
+
+
+    .incr-decr-box {
+        border-top: 1px solid #BEBEBE;
+    border-bottom: 1px solid #BEBEBE;
+    border-left: 0;
+    border-right: 0;
+    padding: 8px;
+    }
+
+ }
+
+
+ /* end products responsive */
+
+
+
+ 
+
+ .incr-decr-box h3 {
+    font-family: FiraGO;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+color: #121212;
+ }
+
+ .decrement{
+    font-family:FiraGO;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+color: #121212;
+border: none;
+background: none;
+cursor: pointer;
+ }
+
+ .increment {
+    font-family: FiraGO;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+color: #FB6F20;
+border: none;
+background: none;
+cursor: pointer;
+ }
+
+/* end order products styles */
+
+
+
+/* end order's styles */
+
+
+
+
+
+/* start billing box styles */
+
+
+
+.main-billing-box {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 68px;
+    padding: 0 0 170px 0;
+}
+
+.billing-input-box{
+    width: 1040px;
+    max-width: 100%;
+    margin: auto;
+
+}
+
+
+.billing-big-name {
+    font-family: FiraGO;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+color: #121212;
+text-align: center;
+}
+
+
+
+.input-container{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 66px 76px;
+    background: #F6F6F6;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px 4px rgba(184, 184, 184, 0.25);
+    
+
+}
+
+
+.inputsss{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.inputsss p {
+    font-family: FiraGO;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+color: #BEBEBE;
+}
+
+
+.validation-input{
+    width: 394px;
+    max-width: 100%;
+    padding: 12px 0 12px 14px;
+    font-family: FiraGO;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+color: #121212;
+border: 1px solid #BEBEBE;
+border-radius: 8px;
+outline: none;
+}
+
+.inputsss:nth-child(3){
+    margin-top: 29px;
+}
+
+.inputsss:nth-child(4){
+    margin-top: 29px;
+}
+
+
+/* start billing box responsive */
+
+
+@media (max-width:947px){
+    .input-container{
+        justify-content: center;
+    }
+
+
+.inputsss:nth-child(2){
+    margin-top: 29px;
+}
+
+}
+
+
+
+
+@media (max-width:440px){
+    .validation-input{
+        width: 270px;
+        max-width: 100%;
+        padding: 10px 0 10px 12px;
+        font-size: 15px;
+    }
+
+
+    .inputsss p{
+        font-size: 17px;
+    }
+
+
+    .inputsss{
+        gap: 12px;
+    }
+
+
+}
+
+
+/* end billing box responsive */
+
+.orderbtn-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 68px;
+}
+
+.order-button{
+    background: #FB6F20;
+border-radius: 8px;
+font-family: FiraGO;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+color: #FFFFFF;
+padding: 17px 80px;
+text-decoration: none;
+}
+
+
+
+@media (max-width: 435px){
+    .order-button{
+        padding: 10px 50px;
+        font-size: 20px;
+    }
+
+    .orderbtn-box {
+        margin-top: 40px;
+    }
+}
+
+
+/* end billing box styles */
